@@ -1,0 +1,122 @@
+****************
+1st approach 1st
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int k=0;
+
+    std::string s = "This is a Program";
+    std::vector<std::string> result;
+    std::istringstream iss(s);
+    for(std::string s; iss >> s; ){
+        result.push_back(s);
+        ++k;
+    }
+
+    for(int i=0;i<k;++i){
+        cout<<result[i]<<endl;
+    }
+
+}
+
+
+
+****************
+1st approach 2nd
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int k=0;
+
+   std::string s = "This is a Program";
+    std::vector<std::string> result;
+    std::istringstream iss(s);
+    for(std::string s; iss >> s; ){
+        result.push_back(s);
+        ++k;
+    }
+
+
+    string d="Program";
+    for(int i=0;i<k;++i){
+        if(result[i]==d){
+            cout<<"found ";
+        }
+    }
+
+
+}
+
+
+****************
+2nd approach 1st
+
+#include <stdio.h>
+#include <string.h>
+#include<bits/stdc++.h>
+using namespace std;
+int main ()
+{
+    int k=0;
+    vector<string>v;
+  char str[] ="This is a int program";
+  char * pch;
+  
+  pch = strtok (str," ,.-");
+  while (pch != NULL)
+  {
+      v.push_back(pch);
+      ++k;
+    
+    pch = strtok (NULL, " ,.-");
+  }
+
+  for(int i=0;i<k;++i){
+        cout<<v[i]<<endl;
+    }
+
+
+  return 0;
+}
+
+
+****************
+2nd approach 2nd
+
+
+#include <stdio.h>
+#include <string.h>
+#include<bits/stdc++.h>
+using namespace std;
+int main ()
+{
+    int k=0;
+    vector<string>v;
+  char str[] ="This is a program";
+  char d[]="program";
+  char * pch;
+
+  pch = strtok (str," ,.-");
+  while (pch != NULL)
+  {
+      v.push_back(pch);
+      ++k;
+
+    pch = strtok (NULL, " ,.-");
+  }
+
+  for(int i=0;i<k;++i){
+        if(v[i]==d){
+            cout<<"found ";
+        }
+    }
+
+
+  return 0;
+}
